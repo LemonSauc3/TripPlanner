@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DateSelector">
+
+    <TextView
+        android:id="@+id/textViewStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="@string/startDate"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        style="?android:spinnerStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewStartDate"
+        android:layout_centerHorizontal="true"
+        android:text="@string/selectDate"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/textViewEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonStart"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/endDate"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/buttonEnd"
+        style="?android:spinnerStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewEndDate"
+        android:layout_centerHorizontal="true"
+        android:text="@string/selectDate"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttonEnd"
+        android:textSize="20sp"
+        android:textColor="@color/teal_200"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/submitDatesBtn"
+        android:onClick="submitDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submitDates"
+        android:layout_below="@id/buttonEnd"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
+

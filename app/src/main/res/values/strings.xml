@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Trip Planner</string>
+    <string name="create_trip">Create New Trip</string>
+
+    <string name="trip_cancel">Cancel Trip</string>
+    <string name="trip_create">Create Trip</string>
+    <string name="set_destination">Set Destination</string>
+    <string name="set_dates">Set Dates</string>
+    <string name="set_members">Set Members</string>
+    <string name="trip_title">Trip Details</string>
+    <string name="destination">Destination</string>
+    <string name="to">--></string>
+
+    <string name="save_destination">Save</string>
+    <string name="cancel_destination">Cancel</string>
+    <string name="dest_title">Destination Details</string>
+    <string name="departure">Departure</string>
+    <string name="arrival">Arrival</string>
+
+    <string name="selectDate">Select Date</string>
+    <string name="startDate">Start Date</string>
+    <string name="endDate">End Date</string>
+    <string name="submitDates">Submit</string>
+    <string name="dateError">End date must be after start date!</string>
+
+
+</resources>
