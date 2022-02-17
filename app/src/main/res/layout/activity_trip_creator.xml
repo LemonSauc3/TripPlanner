@@ -114,12 +114,14 @@
         app:layout_constraintTop_toBottomOf="@+id/trip_title_text" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/dest_title_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/destination"
         android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider4"
@@ -135,7 +137,7 @@
         android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/dest_title_view" />
 
     <TextView
         android:id="@+id/arrival_view"
@@ -147,7 +149,7 @@
         android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/dest_title_view" />
 
     <TextView
         android:id="@+id/filler_text_to"
@@ -161,6 +163,68 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/arrival_view"
         app:layout_constraintStart_toEndOf="@+id/departure_view"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/dest_title_view"
         tools:text="@string/to" />
+
+    <TextView
+        android:id="@+id/date_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/date_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filler_text_to"
+        tools:text="@string/date_title" />
+
+    <TextView
+        android:id="@+id/trip_leave_view"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_title_view" />
+
+    <TextView
+        android:id="@+id/trip_return_view"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="75dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_title_view" />
+
+    <TextView
+        android:id="@+id/date_mod_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/trip_modifier"
+        app:layout_constraintEnd_toStartOf="@+id/trip_return_view"
+        app:layout_constraintStart_toEndOf="@+id/trip_leave_view"
+        app:layout_constraintTop_toBottomOf="@+id/date_title_view"
+        tools:text="@string/trip_modifier" />
+
+    <TextView
+        android:id="@+id/member_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/member_title"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_mod_view"
+        tools:text="@string/member_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

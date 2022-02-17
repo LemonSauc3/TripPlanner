@@ -31,6 +31,8 @@ public class TripCreator extends AppCompatActivity {
     // TextViews
     private TextView departureView;
     private TextView arrivalView;
+    private TextView leaveView;
+    private TextView returnView;
 
     // TripHandler
     private TripHandler tHandler;
@@ -66,6 +68,8 @@ public class TripCreator extends AppCompatActivity {
         // Initializing the TextViews
         departureView = (TextView) findViewById(R.id.departure_view);
         arrivalView = (TextView) findViewById(R.id.arrival_view);
+        leaveView = (TextView) findViewById(R.id.trip_leave_view);
+        returnView = (TextView) findViewById(R.id.trip_return_view);
 
         // Initializing the Data types
         arrival = "";
@@ -80,6 +84,8 @@ public class TripCreator extends AppCompatActivity {
         // Displaying the information
         departureView.setText(tHandler.getDeparture());
         arrivalView.setText(tHandler.getArrival());
+        leaveView.setText(tHandler.getLeaveDate());
+        returnView.setText(tHandler.getReturnDate());
 
         // Creating Button 'onClick' Methods
         cancelTrip.setOnClickListener(new View.OnClickListener() {
@@ -147,10 +153,17 @@ public class TripCreator extends AppCompatActivity {
         else if (requestCode == DATE_CODE) {
             Toast.makeText(getApplicationContext(), "DATE_CODE", Toast.LENGTH_SHORT).show();
             if (resultCode == Activity.RESULT_OK) {
+                leaveDate = data.getStringExtra("leaveDate");
+                returnDate = data.getStringExtra("returnDate");
+                tHandler.setLeaveDate(leaveDate);
+                tHandler.setReturnDate(returnDate);
 
+                // Displaying the information
+                leaveView.setText(tHandler.getLeaveDate());
+                returnView.setText(tHandler.getReturnDate());
             }
             else if (resultCode == Activity.RESULT_CANCELED) {
-
+                Toast.makeText(getApplicationContext(), "CANCELLED", Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -161,7 +174,7 @@ public class TripCreator extends AppCompatActivity {
 
             }
             else if (resultCode == Activity.RESULT_CANCELED) {
-
+                Toast.makeText(getApplicationContext(), "CANCELLED", Toast.LENGTH_SHORT).show();
             }
         }
 

@@ -23,6 +23,10 @@
     <string name="submitDates">Submit</string>
     <string name="cancelDates">Cancel</string>
     <string name="dateError">End date must be after start date!</string>
+    <string name="date_title">Date Details</string>
+    <string name="trip_modifier">to the</string>
+
+    <string name="member_title">Members</string>
 
 
 </resources>
