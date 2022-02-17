@@ -1,75 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DateSelector">
 
-    <TextView
-        android:id="@+id/textViewStartDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:text="@string/startDate"
-        android:textSize="30sp" />
 
     <Button
-        android:id="@+id/buttonStart"
-        style="?android:spinnerStyle"
+        android:id="@+id/date_cancel_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewStartDate"
-        android:layout_centerHorizontal="true"
-        android:text="@string/selectDate"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        tools:ignore="DuplicateSpeakableTextCheck" />
-
-    <TextView
-        android:id="@+id/textViewEndDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonStart"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="100dp"
-        android:text="@string/endDate"
-        android:textSize="30sp" />
+        android:layout_marginBottom="16dp"
+        android:text="@string/cancelDates"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/cancelDates" />
 
     <Button
-        android:id="@+id/buttonEnd"
-        style="?android:spinnerStyle"
+        android:id="@+id/date_save_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewEndDate"
-        android:layout_centerHorizontal="true"
-        android:text="@string/selectDate"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/errorTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/buttonEnd"
-        android:textSize="20sp"
-        android:textColor="@color/teal_200"
-        android:layout_marginTop="50dp"/>
-
-    <Button
-        android:id="@+id/submitDatesBtn"
-        android:onClick="submitDates"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/submitDates"
-        android:layout_below="@id/buttonEnd"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"/>
+        app:layout_constraintBottom_toTopOf="@+id/date_cancel_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/submitDates"
+        android:onClick="openDatePicker"/>
 
-</RelativeLayout>
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="409dp"
+        android:layout_height="5dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/date_save_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/date_picker_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/selectDate"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/selectDate" />
+
+    <TextView
+        android:id="@+id/date_leave_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/startDate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_picker_view"
+        tools:text="@string/startDate" />
+
+    <Button
+        android:id="@+id/date_leave_button"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/startDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_leave_view" />
+
+    <TextView
+        android:id="@+id/date_return_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/endDate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_leave_button"
+        tools:text="@string/endDate" />
+
+    <Button
+        android:id="@+id/date_return_button"
+        style="?android:spinnerStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/endDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_return_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 

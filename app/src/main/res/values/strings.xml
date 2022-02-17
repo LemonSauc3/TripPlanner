@@ -21,6 +21,7 @@
     <string name="startDate">Start Date</string>
     <string name="endDate">End Date</string>
     <string name="submitDates">Submit</string>
+    <string name="cancelDates">Cancel</string>
     <string name="dateError">End date must be after start date!</string>
 
 
